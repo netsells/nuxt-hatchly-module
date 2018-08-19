@@ -1,6 +1,6 @@
-import get from 'lodash/get';
+const get = require('lodash/get');
 
-module.exports = {
+exports.default = {
     /**
      * Set SEO/head metadata
      *

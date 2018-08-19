@@ -1,4 +1,6 @@
 import Vue from 'vue';
-import page from './mixins/page';
+import Attr from 'nuxt-hatchly-module/components/Attr.vue';
+import PageMixin from 'nuxt-hatchly-module/mixins/page';
 
-Vue.mixin(page);
+Vue.component('attr', Attr);
+Vue.mixin(PageMixin);
