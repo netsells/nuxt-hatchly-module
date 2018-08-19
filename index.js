@@ -10,7 +10,7 @@ module.exports = function HatchlyModule(moduleConfig = {}) {
     }
     if (moduleConfig.apollo) {
         this.requireModule('@nuxtjs/apollo');
-        this.config.apollo = {
+        this.options.apollo = {
             clientConfigs: {
                 default: require('./modules/@nuxtjs/apollo/network-interfaces/default.js'),
             },
@@ -18,7 +18,7 @@ module.exports = function HatchlyModule(moduleConfig = {}) {
     }
     if (moduleConfig.proxy) {
         this.requireModule('@nuxtjs/proxy');
-        this.config.proxy = {
+        this.options.proxy = {
             '/api': { target: process.env.API_BASE, changeOrigin: true },
             '/admin': { target: process.env.API_BASE, changeOrigin: true },
             '/file': { target: process.env.API_BASE, changeOrigin: true },
@@ -40,8 +40,6 @@ module.exports = function HatchlyModule(moduleConfig = {}) {
     }
 
     this.addPlugin(path.resolve(__dirname, 'plugin.js'));
-
-    console.log(this.options)
 };
 
 module.exports.meta = require('./package.json');

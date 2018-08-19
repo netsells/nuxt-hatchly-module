@@ -5,7 +5,7 @@ const fs = require('fs');
 const fragmentPath = resolve(__dirname, 'fragment-types.json');
 
 const generateFragmentMatcher = () => {
-    fetch(`${process.env.PAGES_API_URL}`, {
+    return fetch(`${process.env.PAGES_API_URL}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -22,18 +22,20 @@ const generateFragmentMatcher = () => {
             }`,
         }),
     })
-    .then(({ json }) => json())
-    .then(({ data }) => {
-        // here we're filtering out any type information unrelated to unions or interfaces
-        data.__schema.types = data.__schema.types
-            .filter(({ possibleTypes }) => possibleTypes !== null);
+        .then((data) => data.json())
+        .then(({ data }) => {
+            // here we're filtering out any type information unrelated to unions or interfaces
+            data.__schema.types = data.__schema.types
+                .filter(({ possibleTypes }) => possibleTypes !== null);
 
-        fs.writeFile(fragmentPath, JSON.stringify(data), (err) => {
-            if (err) {
-                return console.error('Error writing fragmentTypes file', err)
-            }
+            fs.writeFileSync(fragmentPath, JSON.stringify(data), 'utf8', (err) => {
+                if (err) {
+                    return console.error('Error writing fragmentTypes file', err)
+                }
+            });
+
+            return data;
         });
-    });
 };
 
 module.exports = generateFragmentMatcher;
