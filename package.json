@@ -1,10 +1,10 @@
 {
-  "name": "nuxt-hatchly-module",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "consola": "^2.10.1",
-    "lodash": "^4.17.10"
-  }
+    "name": "@netsells/nuxt-hatchly",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "consola": "^2.10.1",
+        "lodash": "^4.17.10"
+    }
 }
