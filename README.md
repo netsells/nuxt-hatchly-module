@@ -30,5 +30,5 @@ modules: [
 
 ## Future Features
 
-- [] Axios module
-- [] Apollo module
+- [ ] Axios module
+- [ ] Apollo module
