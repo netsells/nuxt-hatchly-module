@@ -4,15 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@nuxtjs/apollo": "^4.0.0-rc1",
-    "@nuxtjs/google-tag-manager": "^2.0.0",
-    "@nuxtjs/proxy": "^1.2.4",
-    "@nuxtjs/pwa": "^2.0.8",
-    "apollo-cache-inmemory": "^1.2.8",
-    "apollo-link": "^1.2.2",
-    "apollo-link-http": "^1.5.4",
-    "bootstrap-vue": "^2.0.0-rc.11",
-    "lodash": "^4.17.10",
-    "nuxt-sass-resources-loader": "^2.0.4"
+    "consola": "^2.10.1",
+    "lodash": "^4.17.10"
   }
 }

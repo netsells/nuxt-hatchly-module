@@ -1,6 +1,18 @@
-import Vue from 'vue';
-import Attr from 'nuxt-hatchly-module/components/Attr.vue';
-import PageMixin from 'nuxt-hatchly-module/mixins/page';
+<% if (options.modules.snippets) { %>
+import { register as registerSnippetsModule } from './hatchly/modules/snippets';
+<% } %>
+<% if (options.modules.navigation) { %>
+import { register as registerNavigationModule } from './hatchly/modules/navigation';
+<% } %>
 
-Vue.component('attr', Attr);
-Vue.mixin(PageMixin);
+export default async function(context) {
+    <% if (options.modules.snippets) { %>
+    await registerSnippetsModule(context);
+    <% } %>
+
+    <% if (options.modules.navigation) { %>
+    await registerNavigationModule(context);
+    <% } %>
+};
+
+

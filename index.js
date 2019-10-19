@@ -1,45 +1,64 @@
-const path = require('path');
+const { resolve } = require('path');
 const { mergeDefaults } = require('./default-options');
+const navigationModule = require('./modules/navigation/module');
+const bootstrapModule = require('./modules/bootstrap/module');
+const styleResourcesModule = require('./modules/styleResources/module');
+const snippetsModule = require('./modules/snippets/module');
+const genericModule = require('./modules/generic-module');
+const loader = new (require('./loader'));
 
-module.exports = function HatchlyModule(moduleConfig = {}) {
-    moduleConfig = mergeDefaults(moduleConfig);
+module.exports = function HatchlyModule(options = {}) {
+    this.options.hatchly = options = mergeDefaults(options, this.options.hatchly);
 
-    // Add default modules
-    if (moduleConfig.pwa) {
-        this.requireModule('@nuxtjs/pwa');
-    }
-    if (moduleConfig.apollo) {
-        this.requireModule('@nuxtjs/apollo');
-        this.options.apollo = {
-            clientConfigs: {
-                default: require('./modules/@nuxtjs/apollo/network-interfaces/default.js'),
-            },
-        };
-    }
-    if (moduleConfig.proxy) {
-        this.requireModule('@nuxtjs/proxy');
-        this.options.proxy = {
-            '/api': { target: process.env.API_BASE, changeOrigin: true },
-            '/admin': { target: process.env.API_BASE, changeOrigin: true },
-            '/file': { target: process.env.API_BASE, changeOrigin: true },
-        };
-    }
-    if (moduleConfig.gtm) {
-        this.requireModule(['@nuxtjs/google-tag-manager', {
-            id: process.env.GTM_KEY || '',
-            pageTracking: true,
-        }]);
-    }
-    if (moduleConfig.bootstrap) {
-        this.requireModule(['bootstrap-vue/nuxt', {
-            css: false,
-        }]);
-    }
-    if (moduleConfig.sassResourcesLoader) {
-        this.requireModule('nuxt-sass-resources-loader');
+    this.options.css.push('~assets/scss/app.scss');
+
+    if (options.pwa) {
+        loader.load(
+            'pwa',
+            genericModule.call(this, '@nuxtjs/pwa', options.pwa)
+        );
     }
 
-    this.addPlugin(path.resolve(__dirname, 'plugin.js'));
+    if (options.bootstrap) {
+        loader.load(
+            'bootstrap',
+            bootstrapModule.call(this, options.bootstrap)
+        );
+    }
+
+    if (options.styleResources) {
+        loader.load(
+            'styleResources',
+            styleResourcesModule.call(this, options.styleResources)
+        );
+    }
+
+    if (options.navigation) {
+        loader.load(
+            'navigation',
+            navigationModule.call(this, options.navigation)
+        );
+    }
+
+    if (options.snippets) {
+        loader.load(
+            'snippets',
+            snippetsModule.call(this, options.snippets)
+        );
+    }
+
+    loader.table();
+
+    const { dst } = this.addTemplate({
+        src: resolve(__dirname, 'plugin.js'),
+        options: {
+            modules: loader.getEnabledModules(),
+        },
+    });
+
+    this.options.plugins.push(resolve(this.options.buildDir, dst));
+
+    loader.success();
 };
 
 module.exports.meta = require('./package.json');
