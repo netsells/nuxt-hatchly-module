@@ -2,7 +2,6 @@ const merge = require('lodash/merge');
 
 const defaults = {
     pwa: true,
-    apollo: true,
     bootstrap: true,
     styleResources: true,
     snippets: true,
