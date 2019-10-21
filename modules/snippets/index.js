@@ -35,13 +35,7 @@ const registerStoreModule = ({ store }) => {
 
         actions: {
             async get({ commit }) {
-                const { data } = await this.$axios.$get('http://bsg-api.test/navigation/groups');
-
-                for (let i = 0; i < data.length; i++) {
-                    const key = data[i].key;
-                    const { data: items } = await this.$axios.$get(`http://bsg-api.test/navigation/groups/${ key }/items`);
-                    data[i].items = items;
-                }
+                const { data } = await this.$axios.$get('snippets');
 
                 commit('set', data);
             },

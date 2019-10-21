@@ -42,7 +42,7 @@ const registerStoreModule = ({ store }) => {
              * @returns {Promise<void>}
              */
             async get({ commit }) {
-                const { data } = await this.$axios.$get(`navigation/groups`);
+                const { data } = await this.$axios.$get('navigation/groups');
 
                 let requests = data.map(({ key}) => this.$axios.$get(`navigation/groups/${ key }/items`));
 
