@@ -1,5 +1,34 @@
 import Vue from 'vue';
 
+/**
+ * Format the nav url
+ *
+ * @param {String} url
+ *
+ * @returns {String}
+ */
+const urlFormatter = (url) => {
+    return url
+        // As the urls come from an api, the urls will have the
+        // api url as the base. We'll remove this
+        .replace(process.env.API_URL, '')
+        // If the url was the homepage, we'll default to a slash
+        || '/';
+};
+
+/**
+ * Recursively Format each nav item so it's more usable
+ *
+ * @param item
+ *
+ * @returns {{children: *, url: *}}
+ */
+const navItemFormatter = (item) => ({
+    ...item,
+    url: urlFormatter(item.url),
+    children: item.children.map(navItemFormatter),
+});
+
 const registerStoreModule = ({ store }) => {
     store.registerModule('navigations', {
         namespaced: true,
@@ -49,7 +78,7 @@ const registerStoreModule = ({ store }) => {
                 const result = await Promise.all(requests);
 
                 result.forEach((nav, i) => {
-                    data[i].items = nav.data;
+                    data[i].items = nav.data.map(navItemFormatter);
                 });
 
                 commit('set', data);

@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import get from 'lodash/get';
 
 const registerStoreModule = ({ store }) => {
     store.registerModule('snippets', {
@@ -52,7 +53,7 @@ export const registerGlobalMixin = () => {
             $snippet(key) {
                 const find = this.$store.getters['snippets/find'];
 
-                return find(key);
+                return get(find(key), 'value');
             },
         },
     });
