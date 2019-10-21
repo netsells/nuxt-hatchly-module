@@ -67,7 +67,11 @@ export const registerGlobalMixin = () => {
  */
 const fetchData = async ({ store }) => {
     if (process.server) {
-        return await store.dispatch('snippets/get');
+        try {
+            return await store.dispatch('snippets/get');
+        } catch (e) {
+            console.warn('Snippets module not registered or is returning an error code.');
+        }
     }
 };
 

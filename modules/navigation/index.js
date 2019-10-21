@@ -88,7 +88,11 @@ export const registerGlobalMixin = ({ store }) => {
  */
 const fetchData = async ({ store }) => {
     if (process.server) {
-        return await store.dispatch('navigations/get');
+        try {
+            return await store.dispatch('navigations/get');
+        } catch (e) {
+            console.warn('Navigation module not registered or is returning an error code.');
+        }
     }
 };
 
