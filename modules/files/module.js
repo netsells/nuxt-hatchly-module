@@ -1,6 +1,3 @@
-const { hasDependency } = require('../../lib/helpers');
-const { resolve } = require('path');
-
 module.exports = function filesModule(options) {
     const path = options.path || '/file';
     const host = options.host || process.env.API_URL;
