@@ -6,6 +6,7 @@ const defaults = {
     styleResources: true,
     snippets: true,
     navigation: true,
+    files: true,
 };
 
 const mergeDefaults = (config, hatchlyOptions) => {

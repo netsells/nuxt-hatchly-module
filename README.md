@@ -11,7 +11,8 @@
         - `css: false` so that styles aren't pulled in twice
     - `@nuxtjs/style-resources`
     - `@nuxtjs/pwa`
-    
+- Automatic 301 redirection of hatchly file URLs which are composed of only the path (e.g. in the WYSIWYG editor)
+
 ## Usage
 
 Install the dependencies using the following command:

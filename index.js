@@ -4,6 +4,7 @@ const navigationModule = require('./modules/navigation/module');
 const bootstrapModule = require('./modules/bootstrap/module');
 const styleResourcesModule = require('./modules/styleResources/module');
 const snippetsModule = require('./modules/snippets/module');
+const filesModule = require('./modules/files/module');
 const genericModule = require('./modules/generic-module');
 const loader = new (require('./loader'));
 
@@ -37,6 +38,13 @@ module.exports = function HatchlyModule(options = {}) {
         loader.load(
             'navigation',
             navigationModule.call(this, options.navigation)
+        );
+    }
+
+    if (options.files) {
+        loader.load(
+            'files',
+            filesModule.call(this, options.files)
         );
     }
 
