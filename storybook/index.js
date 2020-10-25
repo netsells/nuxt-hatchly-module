@@ -14,7 +14,7 @@ export default ({ modules, store, navs, snippets }) => {
         modules.includes('navigation')
         || modules.includes('navigations')
     ) {
-        const navigationModule = require('@hatchly/nuxt-navigation-module/storybook');
+        const { default: navigationModule } = require('@hatchly/nuxt-navigation-module/storybook');
 
         if (!store) {
             logger.error('Please provide the `store` object to register the navs module');
@@ -33,7 +33,7 @@ export default ({ modules, store, navs, snippets }) => {
     }
 
     if (modules.includes('snippets')) {
-        const snippetsModule = require('@hatchly/nuxt-snippets-module/storybook');
+        const { default: snippetsModule } = require('@hatchly/nuxt-snippets-module/storybook');
 
         if (!store) {
             logger.error('Please provide the `store` object to register the snippets module');
