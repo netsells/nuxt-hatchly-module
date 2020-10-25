@@ -1,6 +1,6 @@
 {
     "name": "@netsells/nuxt-hatchly",
-    "version": "1.4.0",
+    "version": "2.0.0",
     "main": "index.js",
     "license": "MIT",
     "private": false,
