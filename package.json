@@ -12,7 +12,7 @@
         "@hatchly/nuxt-redirects-module": "^1.3.0",
         "@hatchly/nuxt-snippets-module": "^3.4.0",
         "consola": "^2.15.0",
-        "lodash": "^4.17.10"
+        "lodash": "^4.17.20"
     },
     "devDependencies": {
         "@netsells/eslint-config": "^4.0.0"
