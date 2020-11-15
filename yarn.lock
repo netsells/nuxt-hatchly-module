@@ -47,10 +47,10 @@
     graphql-request "^3.2.0"
     nuxt-graphql-request "github:samturrell/nuxt-graphql-request"
 
-"@hatchly/nuxt-redirects-module@^1.3.0":
-  version "1.3.0"
-  resolved "https://npm.netsells.tools/@hatchly%2fnuxt-redirects-module/-/nuxt-redirects-module-1.3.0.tgz#3de08f17218831e2983fc0ab43f1b2c35f2273b9"
-  integrity sha512-5UX6kQIoXO8JKBhyqEWCQXm3ecZOOAKpWG+oJ/SudVBZRVC/fG3/xwCLG/Z17zuJwIoW9/cYII9M0HKwHo7oRw==
+"@hatchly/nuxt-redirects-module@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@hatchly/nuxt-redirects-module/-/nuxt-redirects-module-1.4.0.tgz#45e9eb1a597881149b7f61b0c1e192ea66c75886"
+  integrity sha512-M4aZX6dOKeEFZpvPCo5doQia/G5IWJvbtuIBJITIvhim7Q/2j5Z/KPlbr9MfkvM0gf0f3jgNcdTLW5nZrUW8zA==
 
 "@hatchly/nuxt-snippets-module@^3.4.0":
   version "3.4.0"
