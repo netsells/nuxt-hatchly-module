@@ -15,7 +15,7 @@
         "lodash": "^4.17.20"
     },
     "devDependencies": {
-        "@netsells/eslint-config": "^4.0.0"
+        "@netsells/eslint-config": "^5.0.0"
     },
     "files": [
         "lib/**/*",
