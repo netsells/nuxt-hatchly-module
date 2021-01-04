@@ -68,10 +68,10 @@
   resolved "https://registry.yarnpkg.com/@hatchly/nuxt-redirects-module/-/nuxt-redirects-module-1.4.0.tgz#45e9eb1a597881149b7f61b0c1e192ea66c75886"
   integrity sha512-M4aZX6dOKeEFZpvPCo5doQia/G5IWJvbtuIBJITIvhim7Q/2j5Z/KPlbr9MfkvM0gf0f3jgNcdTLW5nZrUW8zA==
 
-"@hatchly/nuxt-snippets-module@^3.6.0":
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/@hatchly/nuxt-snippets-module/-/nuxt-snippets-module-3.6.0.tgz#a7126bf8b0d313a8494644caefe00358803ba9dc"
-  integrity sha512-RF0ZGAzpQ0d9zn4ISFpc033y31tp5/z2symgqNK+m5ZrA/1aakjm1enXsyKsyvXi1GYFGW0Mwv7YkinqfBkFJA==
+"@hatchly/nuxt-snippets-module@^3.6.1":
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/@hatchly/nuxt-snippets-module/-/nuxt-snippets-module-3.6.1.tgz#45faa4d55b0ec5cb60e07b7e98e66cc493ef4642"
+  integrity sha512-owQWK5YUlEdCNJyZ3v4J2slWrDzVIOI+3gtYofdeSsxCzB89rMOuNc3i+KBbTRuzeQwYm951cf0915w/1potog==
 
 "@netsells/eslint-config@^5.0.0":
   version "5.0.0"
