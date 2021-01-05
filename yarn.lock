@@ -63,10 +63,10 @@
     graphql-request "^3.2.0"
     nuxt-graphql-request "^3.2.0"
 
-"@hatchly/nuxt-redirects-module@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@hatchly/nuxt-redirects-module/-/nuxt-redirects-module-1.4.0.tgz#45e9eb1a597881149b7f61b0c1e192ea66c75886"
-  integrity sha512-M4aZX6dOKeEFZpvPCo5doQia/G5IWJvbtuIBJITIvhim7Q/2j5Z/KPlbr9MfkvM0gf0f3jgNcdTLW5nZrUW8zA==
+"@hatchly/nuxt-redirects-module@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@hatchly/nuxt-redirects-module/-/nuxt-redirects-module-2.0.0.tgz#c9395efc61f6716bf390910c0f7ae11886fa0db9"
+  integrity sha512-BQN4qSxjd96m2ANrfgpReXy2k0gKKBJpVSFdZEC3jHILHSLa6UOGmAmJe8ga7W+SzFnsCHUYqwD1bA6ypyWqNw==
 
 "@hatchly/nuxt-snippets-module@^4.0.0":
   version "4.0.0"
