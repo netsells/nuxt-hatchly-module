@@ -44,10 +44,10 @@
   resolved "https://npm.netsells.tools/@hatchly%2fnuxt-files-module/-/nuxt-files-module-1.0.0.tgz#f75866972414e92aa741827fac713994d8e18534"
   integrity sha512-DrSlLV1mOTkONNpLoSOCojro/RgzWiUDk2piEa8WbFsteKabApoJo0ZlBHFJoSeFRIMdWnHrna2nt5MPxcLsDw==
 
-"@hatchly/nuxt-navigation-module@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@hatchly/nuxt-navigation-module/-/nuxt-navigation-module-4.0.0.tgz#b2577376649c1946c4de71549bf14ba623caa773"
-  integrity sha512-He00LtC3uPATSbvP2OFzyljOgsHYFQx/7LEXpoakFinTdyDfrHA9rVlpIIblPWgMbNFHxeQ2kmDRtyRbv1hzFQ==
+"@hatchly/nuxt-navigation-module@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@hatchly/nuxt-navigation-module/-/nuxt-navigation-module-4.1.0.tgz#efc61a277701cd1c91d03da6097a7daae833324e"
+  integrity sha512-AQjTQkt3gWE5TstMJWygVeYcmlXXOj9F8Va92o9emaYzZyVyq5oJ/Ls/fU8pbCGklhapnLpCTsHZ0dJys6+PuQ==
 
 "@hatchly/nuxt-newsletter-module@^1.0.1":
   version "1.0.1"
