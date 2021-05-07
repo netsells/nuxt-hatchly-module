@@ -2,6 +2,8 @@
 
 > Nuxt module for integrating with Hatchly-based web platforms
 
+Created and maintained by the [Netsells team](https://netsells.co.uk/)
+
 ## Features
 
 This module sets up the various official hatchly Nuxt integration modules:
