@@ -63,10 +63,10 @@
   resolved "https://npm.netsells.tools/@hatchly%2fnuxt-newsletter-module/-/nuxt-newsletter-module-1.0.1.tgz#a98b4c48717ae3cdefe3500737d75e7063d1f0b5"
   integrity sha512-iR3+8PyK4cIGm83jgEyb8cRMDdNxJHwZ/LRxF528RkOxYsJVyFV63cjnpBr0iLLc7Aio4ntlvTfuPfG1O1vyeA==
 
-"@hatchly/nuxt-pages-module@^5.1.2":
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/@hatchly/nuxt-pages-module/-/nuxt-pages-module-5.1.2.tgz#d1dbc2f3bce0f16669a5acc49ba34ccd65d6d4bc"
-  integrity sha512-1IWXqkLmEWrxTbirWfUZZlFVfq/Cowc87OaXKN7RJ6w7wwa3KMBMjHVBMnkVa07995pTjNJ2OvIc1geQAd0+aQ==
+"@hatchly/nuxt-pages-module@^5.1.3":
+  version "5.1.3"
+  resolved "https://registry.yarnpkg.com/@hatchly/nuxt-pages-module/-/nuxt-pages-module-5.1.3.tgz#7d962ef214aff4f68cd3184d12ef3ef0ac50873e"
+  integrity sha512-fxXGyYTvrMdlUI+XtwZVum68URn/284wjCgvBJW+cXyKdvwRXOAN/OZ1con0xgbN5ZuLRdj/jvqlnRtEf7rj4A==
   dependencies:
     graphql "^15.3.0"
     graphql-request "^3.2.0"

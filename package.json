@@ -8,7 +8,7 @@
         "@hatchly/nuxt-files-module": "^1.0.0",
         "@hatchly/nuxt-navigation-module": "^4.1.2",
         "@hatchly/nuxt-newsletter-module": "^1.0.1",
-        "@hatchly/nuxt-pages-module": "^5.1.2",
+        "@hatchly/nuxt-pages-module": "^5.1.3",
         "@hatchly/nuxt-redirects-module": "^2.0.0",
         "@hatchly/nuxt-snippets-module": "^4.1.1",
         "consola": "^2.15.3",
